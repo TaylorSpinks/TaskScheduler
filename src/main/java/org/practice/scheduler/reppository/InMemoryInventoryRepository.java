@@ -3,9 +3,11 @@ package org.practice.scheduler.reppository;
 import org.practice.scheduler.entities.InventoryItem;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 @Repository
 public class InMemoryInventoryRepository implements InventoryRepository {
@@ -35,6 +37,10 @@ public class InMemoryInventoryRepository implements InventoryRepository {
 
     @Override
     public Map<InventoryItem, Integer> getAll() {
-        return Map.of();
+        return inventory.entrySet().stream()
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        entry -> entry.getValue().get()
+                ));
     }
 }
