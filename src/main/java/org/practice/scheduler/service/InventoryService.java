@@ -4,20 +4,29 @@ import org.practice.scheduler.entities.InventoryItem;
 import org.practice.scheduler.reppository.InMemoryInventoryRepository;
 
 import java.util.Map;
+import java.util.logging.Logger;
 
 public class InventoryService {
     private final InMemoryInventoryRepository inMemoryInventoryRepository = new InMemoryInventoryRepository();
+    private static final Logger logger = Logger.getLogger(InventoryService.class.getName());
 
     public void addStock(InventoryItem item, int quantity){
         inMemoryInventoryRepository.add(item, quantity);
 
     }
-    public void removeStock(InventoryItem item, int quantity){
-        inMemoryInventoryRepository.remove(item, quantity);
+    public void removeStock(InventoryItem item){
+        inMemoryInventoryRepository.remove(item);
 
     }
+
     public void updateStock(InventoryItem item, int quantity){
         inMemoryInventoryRepository.update(item, quantity);
+        int newQuantity = inMemoryInventoryRepository.getQuantity(item);
+
+        if(newQuantity < 0){
+            // we don't want negative quantities
+            inMemoryInventoryRepository.update(item, Math.abs(newQuantity));
+        }
     }
 
     public Map<InventoryItem,Integer> getAllItems(){

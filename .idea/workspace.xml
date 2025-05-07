@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df313d29-1e32-4fc3-b391-9f64c4c73df0" name="Changes" comment="add service tests and service layer, refactor to quantity to be external from inventory item">
+    <list default="true" id="df313d29-1e32-4fc3-b391-9f64c4c73df0" name="Changes" comment="refactor test naming to be accurate, miss named as task but should be inventory">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InMemoryInventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InMemoryInventoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InventoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/InventoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/TaskService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/service/InventoryServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/InventoryServiceTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,8 +71,15 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.InventoryControllerTests.shouldReturnInventoryItemsWHenAddingTasks.executor": "Run",
+    "Gradle.InventoryServiceTests.testWhenAddInventory.executor": "Run",
     "Gradle.InventoryServiceTests.testWhenAddTask.executor": "Run",
+    "Gradle.InventoryServiceTests.testWhenReduceInventory.executor": "Run",
+    "Gradle.InventoryServiceTests.testWhenReduceInventoryAndResultIsNegative.executor": "Run",
+    "Gradle.InventoryServiceTests.testWhenRemoveInventory.executor": "Run",
     "Gradle.InventoryServiceTests.testWhenRemoveTask.executor": "Run",
+    "Gradle.InventoryServiceTests.testWhenUpdateInventory.executor": "Run",
+    "Gradle.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReduced.executor": "Run",
+    "Gradle.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReducedAndIsNegative.executor": "Run",
     "Gradle.InventoryServiceTests.testWhenUpdateTask.executor": "Run",
     "Gradle.TaskControllerTests.shouldReturnInventoryItems.executor": "Run",
     "Gradle.TaskControllerTests.shouldReturnInventoryItemsWHenAddingTasks.executor": "Run",
@@ -83,8 +94,8 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.InventoryServiceTests.testWhenUpdateTask">
-    <configuration name="InventoryControllerTests.shouldReturnInventoryItemsWHenAddingTasks" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReducedAndIsNegative">
+    <configuration name="InventoryServiceTests.testWhenReduceInventory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -97,7 +108,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;controller.InventoryControllerTests.shouldReturnInventoryItemsWHenAddingTasks&quot;" />
+            <option value="&quot;service.InventoryServiceTests.testWhenReduceInventory&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -108,7 +119,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="InventoryServiceTests.testWhenAddTask" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="InventoryServiceTests.testWhenRemoveInventory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -121,7 +132,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;service.InventoryServiceTests.testWhenAddTask&quot;" />
+            <option value="&quot;service.InventoryServiceTests.testWhenRemoveInventory&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -132,7 +143,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="InventoryServiceTests.testWhenRemoveTask" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="InventoryServiceTests.testWhenUpdateInventory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -145,7 +156,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;service.InventoryServiceTests.testWhenRemoveTask&quot;" />
+            <option value="&quot;service.InventoryServiceTests.testWhenUpdateInventory&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -156,7 +167,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="InventoryServiceTests.testWhenUpdateTask" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReduced" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -169,7 +180,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;service.InventoryServiceTests.testWhenUpdateTask&quot;" />
+            <option value="&quot;service.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReduced&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -180,7 +191,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TaskControllerTests.shouldReturnOkWhenAddingTasks" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReducedAndIsNegative" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -193,7 +204,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;controller.TaskControllerTests.shouldReturnOkWhenAddingTasks&quot;" />
+            <option value="&quot;service.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReducedAndIsNegative&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -206,11 +217,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.InventoryServiceTests.testWhenUpdateTask" />
-        <item itemvalue="Gradle.InventoryServiceTests.testWhenRemoveTask" />
-        <item itemvalue="Gradle.InventoryServiceTests.testWhenAddTask" />
-        <item itemvalue="Gradle.TaskControllerTests.shouldReturnOkWhenAddingTasks" />
-        <item itemvalue="Gradle.InventoryControllerTests.shouldReturnInventoryItemsWHenAddingTasks" />
+        <item itemvalue="Gradle.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReducedAndIsNegative" />
+        <item itemvalue="Gradle.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReduced" />
+        <item itemvalue="Gradle.InventoryServiceTests.testWhenUpdateInventory" />
+        <item itemvalue="Gradle.InventoryServiceTests.testWhenRemoveInventory" />
+        <item itemvalue="Gradle.InventoryServiceTests.testWhenReduceInventory" />
       </list>
     </recent_temporary>
   </component>
@@ -287,7 +298,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746592217109</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="refactor test naming to be accurate, miss named as task but should be inventory">
+      <option name="closed" value="true" />
+      <created>1746592420932</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1746592420932</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -312,6 +331,7 @@
     <MESSAGE value="Add repository for in memory task storage" />
     <MESSAGE value="Add inmemory (thread safe) repository with, initial service layer" />
     <MESSAGE value="add service tests and service layer, refactor to quantity to be external from inventory item" />
-    <option name="LAST_COMMIT_MESSAGE" value="add service tests and service layer, refactor to quantity to be external from inventory item" />
+    <MESSAGE value="refactor test naming to be accurate, miss named as task but should be inventory" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor test naming to be accurate, miss named as task but should be inventory" />
   </component>
 </project>

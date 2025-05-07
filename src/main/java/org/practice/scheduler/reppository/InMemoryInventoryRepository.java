@@ -3,7 +3,6 @@ package org.practice.scheduler.reppository;
 import org.practice.scheduler.entities.InventoryItem;
 import org.springframework.stereotype.Repository;
 
-import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -20,7 +19,7 @@ public class InMemoryInventoryRepository implements InventoryRepository {
     }
 
     @Override
-    public void remove(InventoryItem item, int quantity) {
+    public void remove(InventoryItem item) {
         inventory.remove(item);
     }
 
@@ -32,7 +31,9 @@ public class InMemoryInventoryRepository implements InventoryRepository {
 
     @Override
     public int getQuantity(InventoryItem item) {
-        return 0;
+        AtomicInteger quantity = inventory.getOrDefault(item, new AtomicInteger(0));
+
+        return quantity.get();
     }
 
     @Override

@@ -32,7 +32,7 @@ public class InventoryServiceTests {
         InventoryService service = new InventoryService();
 
         service.addStock(item,quantity);
-        service.removeStock(item,quantity);
+        service.removeStock(item);
 
         Map<InventoryItem, Integer> resultMap = new HashMap<>(service.getAllItems());
 
@@ -52,6 +52,44 @@ public class InventoryServiceTests {
 
         service.addStock(item,quantity);
         service.updateStock(item,quantityToAdd);
+
+        Map<InventoryItem, Integer> resultMap = new HashMap<>(service.getAllItems());
+
+        assertEquals(totalNewQuantity, resultMap.get(item));
+    }
+
+    @Test
+    void testWhenUpdateInventoryAndTotalQuantityIsReduced(){
+        int quantity = 8;
+        int quantityToRemove = -3;
+
+        int totalNewQuantity = 5;
+
+        InventoryItem item = new InventoryItem("Bbq Shapes", "Crackers");
+
+        InventoryService service = new InventoryService();
+
+        service.addStock(item,quantity);
+        service.updateStock(item,quantityToRemove);
+
+        Map<InventoryItem, Integer> resultMap = new HashMap<>(service.getAllItems());
+
+        assertEquals(totalNewQuantity, resultMap.get(item));
+    }
+
+    @Test
+    void testWhenUpdateInventoryAndTotalQuantityIsReducedAndIsNegative(){
+        int quantity = 8;
+        int quantityToRemove = -9;
+
+        int totalNewQuantity = 0;
+
+        InventoryItem item = new InventoryItem("Bbq Shapes", "Crackers");
+
+        InventoryService service = new InventoryService();
+
+        service.addStock(item,quantity);
+        service.updateStock(item,quantityToRemove);
 
         Map<InventoryItem, Integer> resultMap = new HashMap<>(service.getAllItems());
 

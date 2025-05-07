@@ -20,7 +20,7 @@ public class TaskService implements Runnable {
         switch (type) {
             case ADD -> inventoryService.addStock(inventoryItem,quantity);
             case UPDATE -> inventoryService.updateStock(inventoryItem,quantity);
-            case REMOVE -> inventoryService.removeStock(inventoryItem,quantity);
+            case REMOVE -> inventoryService.removeStock(inventoryItem);
         }
     }
 }
