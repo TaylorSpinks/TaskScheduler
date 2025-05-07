@@ -2,10 +2,10 @@ package org.practice.scheduler.entities;
 
 import java.util.Objects;
 
-public record InventoryItem(String itemName, String itemType, int quantity) {
+public record InventoryItem(String itemName, String itemType) {
 
     public String getItemTypeAndName() {
-        return this.itemName + " " + this.itemType + " " + this.quantity;
+        return this.itemName + " " + this.itemType;
     }
 
     @Override

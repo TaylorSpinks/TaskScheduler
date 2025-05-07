@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df313d29-1e32-4fc3-b391-9f64c4c73df0" name="Changes" comment="Get localhost working for testing purposes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/entities/InventoryItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/enums/InventoryOperationType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/model/TaskModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/controller/TaskControllerTests.java" afterDir="false" />
+    <list default="true" id="df313d29-1e32-4fc3-b391-9f64c4c73df0" name="Changes" comment="Add inmemory (thread safe) repository with, initial service layer">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/mappers/TaskMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/entities/InventoryItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/entities/InventoryItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InMemoryInventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InMemoryInventoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InventoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/InventoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/InventoryServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/InventoryServiceTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,10 +24,21 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -59,7 +72,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.InventoryControllerTests.shouldReturnInventoryItemsWHenAddingTasks.executor": "Run",
+    "Gradle.InventoryServiceTests.testWhenAddTask.executor": "Run",
+    "Gradle.InventoryServiceTests.testWhenRemoveTask.executor": "Run",
+    "Gradle.InventoryServiceTests.testWhenUpdateTask.executor": "Run",
     "Gradle.TaskControllerTests.shouldReturnInventoryItems.executor": "Run",
+    "Gradle.TaskControllerTests.shouldReturnInventoryItemsWHenAddingTasks.executor": "Run",
+    "Gradle.TaskControllerTests.shouldReturnOkWhenAddingTasks.executor": "Run",
     "Gradle.TaskScheduler.executor": "Run",
     "RunOnceActivity.git.unshallow": "true",
     "Shell Script.gradlew.executor": "Run",
@@ -70,8 +89,8 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.TaskControllerTests.shouldReturnInventoryItems">
-    <configuration name="TaskControllerTests.shouldReturnInventoryItems" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.InventoryServiceTests.testWhenUpdateTask">
+    <configuration name="InventoryControllerTests.shouldReturnInventoryItemsWHenAddingTasks" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -84,7 +103,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;controller.TaskControllerTests.shouldReturnInventoryItems&quot;" />
+            <option value="&quot;controller.InventoryControllerTests.shouldReturnInventoryItemsWHenAddingTasks&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -95,46 +114,109 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TaskScheduler" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="InventoryServiceTests.testWhenAddTask" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
-          <list />
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;service.InventoryServiceTests.testWhenAddTask&quot;" />
+          </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="gradlew" type="ShConfigurationType" temporary="true">
-      <option name="SCRIPT_TEXT" value="" />
-      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
-      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/gradlew" />
-      <option name="SCRIPT_OPTIONS" value="" />
-      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
-      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
-      <option name="INTERPRETER_PATH" value="/bin/sh" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="EXECUTE_IN_TERMINAL" value="true" />
-      <option name="EXECUTE_SCRIPT_FILE" value="true" />
-      <envs />
+    <configuration name="InventoryServiceTests.testWhenRemoveTask" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;service.InventoryServiceTests.testWhenRemoveTask&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="InventoryServiceTests.testWhenUpdateTask" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;service.InventoryServiceTests.testWhenUpdateTask&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TaskControllerTests.shouldReturnOkWhenAddingTasks" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;controller.TaskControllerTests.shouldReturnOkWhenAddingTasks&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TaskControllerTests.shouldReturnInventoryItems" />
-        <item itemvalue="Gradle.TaskScheduler" />
-        <item itemvalue="Shell Script.gradlew" />
+        <item itemvalue="Gradle.InventoryServiceTests.testWhenUpdateTask" />
+        <item itemvalue="Gradle.InventoryServiceTests.testWhenRemoveTask" />
+        <item itemvalue="Gradle.InventoryServiceTests.testWhenAddTask" />
+        <item itemvalue="Gradle.TaskControllerTests.shouldReturnOkWhenAddingTasks" />
+        <item itemvalue="Gradle.InventoryControllerTests.shouldReturnInventoryItemsWHenAddingTasks" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +253,39 @@
       <option name="project" value="LOCAL" />
       <updated>1746439873994</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Complete controller setup">
+      <option name="closed" value="true" />
+      <created>1746445235463</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746445235463</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add inventory controller for separation of concerns">
+      <option name="closed" value="true" />
+      <created>1746515403244</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746515403244</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add repository for in memory task storage">
+      <option name="closed" value="true" />
+      <created>1746517798592</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746517798592</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add inmemory (thread safe) repository with, initial service layer">
+      <option name="closed" value="true" />
+      <created>1746531054929</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1746531054929</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,15 +305,19 @@
     <MESSAGE value="fixup! Add project structure" />
     <MESSAGE value="Add project structure" />
     <MESSAGE value="Get localhost working for testing purposes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Get localhost working for testing purposes" />
+    <MESSAGE value="Complete controller setup" />
+    <MESSAGE value="Add inventory controller for separation of concerns" />
+    <MESSAGE value="Add repository for in memory task storage" />
+    <MESSAGE value="Add inmemory (thread safe) repository with, initial service layer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add inmemory (thread safe) repository with, initial service layer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/controller/TaskControllerTests.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/InventoryService.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

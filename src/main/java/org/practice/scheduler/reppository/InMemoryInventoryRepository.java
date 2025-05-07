@@ -15,19 +15,19 @@ public class InMemoryInventoryRepository implements InventoryRepository {
     private final ConcurrentHashMap<InventoryItem, AtomicInteger> inventory = new ConcurrentHashMap<>();
 
     @Override
-    public void add(InventoryItem item) {
-        inventory.computeIfAbsent(item, k -> new AtomicInteger(0)).addAndGet(item.quantity());
+    public void add(InventoryItem item, int quantity) {
+        inventory.computeIfAbsent(item, k -> new AtomicInteger(0)).addAndGet(quantity);
     }
 
     @Override
-    public void remove(InventoryItem item) {
+    public void remove(InventoryItem item, int quantity) {
         inventory.remove(item);
     }
 
     @Override
-    public void update(InventoryItem item) {
+    public void update(InventoryItem item, int quantity) {
         AtomicInteger current = this.inventory.computeIfAbsent(item, k -> new AtomicInteger(0));
-        current.getAndAdd(item.quantity());
+        current.getAndAdd(quantity);
     }
 
     @Override

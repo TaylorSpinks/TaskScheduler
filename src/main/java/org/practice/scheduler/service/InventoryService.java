@@ -8,19 +8,19 @@ import java.util.Map;
 public class InventoryService {
     private final InMemoryInventoryRepository inMemoryInventoryRepository = new InMemoryInventoryRepository();
 
-    public void addStock(InventoryItem item){
-        inMemoryInventoryRepository.add(item);
+    public void addStock(InventoryItem item, int quantity){
+        inMemoryInventoryRepository.add(item, quantity);
 
     }
-    public void removeStock(InventoryItem item){
-        inMemoryInventoryRepository.add(item);
+    public void removeStock(InventoryItem item, int quantity){
+        inMemoryInventoryRepository.remove(item, quantity);
 
     }
-    public void updateStock(InventoryItem item){
-        inMemoryInventoryRepository.add(item);
+    public void updateStock(InventoryItem item, int quantity){
+        inMemoryInventoryRepository.update(item, quantity);
     }
 
     public Map<InventoryItem,Integer> getAllItems(){
-        return Map.of();
+        return inMemoryInventoryRepository.getAll();
     }
 }

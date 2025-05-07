@@ -7,18 +7,20 @@ public class TaskService implements Runnable {
     private final InventoryService inventoryService;
     private final InventoryOperationType type;
     private final InventoryItem inventoryItem;
+    private final int quantity;
 
-    public TaskService(InventoryService inventoryService, InventoryOperationType type, InventoryItem inventoryItem){
+    public TaskService(InventoryService inventoryService, InventoryOperationType type, InventoryItem inventoryItem, int quantity) {
         this.inventoryService = inventoryService;
         this.type = type;
         this.inventoryItem = inventoryItem;
+        this.quantity = quantity;
     }
 
-    public void run(){
-        switch (type){
-            case ADD -> inventoryService.addStock(inventoryItem);
-            case UPDATE -> inventoryService.updateStock(inventoryItem);
-            case REMOVE -> inventoryService.removeStock(inventoryItem);
+    public void run() {
+        switch (type) {
+            case ADD -> inventoryService.addStock(inventoryItem,quantity);
+            case UPDATE -> inventoryService.updateStock(inventoryItem,quantity);
+            case REMOVE -> inventoryService.removeStock(inventoryItem,quantity);
         }
     }
 }
