@@ -79,8 +79,8 @@ public class InventoryServiceTests {
 
     @Test
     void testWhenUpdateInventoryAndTotalQuantityIsReducedAndIsNegative(){
-        int quantity = 8;
-        int quantityToRemove = -9;
+        int quantity = 500;
+        int quantityToRemove = -10000;
 
         int totalNewQuantity = 0;
 

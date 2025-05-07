@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df313d29-1e32-4fc3-b391-9f64c4c73df0" name="Changes" comment="refactor test naming to be accurate, miss named as task but should be inventory">
+    <list default="true" id="df313d29-1e32-4fc3-b391-9f64c4c73df0" name="Changes" comment="Fix update method to make the difference using absolute value of x">
+      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/CreateTasksHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InMemoryInventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InMemoryInventoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InventoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/model/TaskModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/model/TaskModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/InventoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/ThreadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/ThreadService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/service/InventoryServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/InventoryServiceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/TaskServiceTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/ThreadServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/ThreadServiceTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +87,9 @@
     "Gradle.TaskControllerTests.shouldReturnInventoryItemsWHenAddingTasks.executor": "Run",
     "Gradle.TaskControllerTests.shouldReturnOkWhenAddingTasks.executor": "Run",
     "Gradle.TaskScheduler.executor": "Run",
+    "Gradle.ThreadServiceTests.executor": "Run",
+    "Gradle.ThreadServiceTests.testCreateManyTasksThatAddRemove.executor": "Run",
+    "Gradle.ThreadServiceTests.testCreateTask.executor": "Run",
     "RunOnceActivity.git.unshallow": "true",
     "Shell Script.gradlew.executor": "Run",
     "git-widget-placeholder": "main",
@@ -94,79 +99,7 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReducedAndIsNegative">
-    <configuration name="InventoryServiceTests.testWhenReduceInventory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;service.InventoryServiceTests.testWhenReduceInventory&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="InventoryServiceTests.testWhenRemoveInventory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;service.InventoryServiceTests.testWhenRemoveInventory&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="InventoryServiceTests.testWhenUpdateInventory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;service.InventoryServiceTests.testWhenUpdateInventory&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.ThreadServiceTests.testCreateTask">
     <configuration name="InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReduced" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -215,13 +148,85 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="ThreadServiceTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;service.ThreadServiceTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ThreadServiceTests.testCreateManyTasksThatAddRemove" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;service.ThreadServiceTests.testCreateManyTasksThatAddRemove&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ThreadServiceTests.testCreateTask" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;service.ThreadServiceTests.testCreateTask&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ThreadServiceTests.testCreateTask" />
+        <item itemvalue="Gradle.ThreadServiceTests.testCreateManyTasksThatAddRemove" />
+        <item itemvalue="Gradle.ThreadServiceTests" />
         <item itemvalue="Gradle.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReducedAndIsNegative" />
         <item itemvalue="Gradle.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReduced" />
-        <item itemvalue="Gradle.InventoryServiceTests.testWhenUpdateInventory" />
-        <item itemvalue="Gradle.InventoryServiceTests.testWhenRemoveInventory" />
-        <item itemvalue="Gradle.InventoryServiceTests.testWhenReduceInventory" />
       </list>
     </recent_temporary>
   </component>
@@ -306,7 +311,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746592420932</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fix update method to make the difference using absolute value of x">
+      <option name="closed" value="true" />
+      <created>1746613132920</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1746613132920</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -332,6 +345,7 @@
     <MESSAGE value="Add inmemory (thread safe) repository with, initial service layer" />
     <MESSAGE value="add service tests and service layer, refactor to quantity to be external from inventory item" />
     <MESSAGE value="refactor test naming to be accurate, miss named as task but should be inventory" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor test naming to be accurate, miss named as task but should be inventory" />
+    <MESSAGE value="Fix update method to make the difference using absolute value of x" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix update method to make the difference using absolute value of x" />
   </component>
 </project>

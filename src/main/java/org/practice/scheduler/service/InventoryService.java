@@ -8,12 +8,12 @@ import java.util.logging.Logger;
 
 public class InventoryService {
     private final InMemoryInventoryRepository inMemoryInventoryRepository = new InMemoryInventoryRepository();
-    private static final Logger logger = Logger.getLogger(InventoryService.class.getName());
 
     public void addStock(InventoryItem item, int quantity){
         inMemoryInventoryRepository.add(item, quantity);
 
     }
+
     public void removeStock(InventoryItem item){
         inMemoryInventoryRepository.remove(item);
 

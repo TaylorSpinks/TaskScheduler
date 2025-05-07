@@ -1,5 +1,32 @@
 package org.practice.scheduler.service;
 
-public class ThreadService  {
+import org.practice.scheduler.model.TaskModel;
 
+import java.util.ArrayList;
+
+public class ThreadService {
+
+    private final InventoryService inventoryService;
+
+    public ThreadService(InventoryService inventoryService) {
+        this.inventoryService = inventoryService;
+    }
+
+    public void runTasks(ArrayList<TaskModel> generatedTasks) throws InterruptedException {
+
+        ArrayList<Thread> threadsToRun = new ArrayList<>();
+
+        for (TaskModel taskModel : generatedTasks) {
+            TaskService task = new TaskService(inventoryService, taskModel.getOperationType(), taskModel.getInventoryItem(), taskModel.getQuantity());
+            threadsToRun.add(new Thread(task));
+        }
+
+        for(Thread thread : threadsToRun){
+            thread.start();
+        }
+
+        for(Thread thread : threadsToRun){
+            thread.join();
+        }
+    }
 }
