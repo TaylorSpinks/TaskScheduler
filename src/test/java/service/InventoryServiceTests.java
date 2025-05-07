@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class InventoryServiceTests {
     @Test
-    void testWhenAddTask(){
+    void testWhenAddInventory(){
         int quantity = 3;
         InventoryItem item = new InventoryItem("Bbq Shapes", "Crackers");
 
@@ -25,7 +25,7 @@ public class InventoryServiceTests {
     }
 
     @Test
-    void testWhenRemoveTask(){
+    void testWhenRemoveInventory(){
         int quantity = 3;
         InventoryItem item = new InventoryItem("Bbq Shapes", "Crackers");
 
@@ -40,7 +40,7 @@ public class InventoryServiceTests {
     }
 
     @Test
-    void testWhenUpdateTask(){
+    void testWhenUpdateInventory(){
         int quantity = 3;
         int quantityToAdd = 5;
 

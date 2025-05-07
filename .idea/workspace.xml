@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df313d29-1e32-4fc3-b391-9f64c4c73df0" name="Changes" comment="Add inmemory (thread safe) repository with, initial service layer">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/mappers/TaskMapper.java" afterDir="false" />
+    <list default="true" id="df313d29-1e32-4fc3-b391-9f64c4c73df0" name="Changes" comment="add service tests and service layer, refactor to quantity to be external from inventory item">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/entities/InventoryItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/entities/InventoryItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InMemoryInventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InMemoryInventoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InventoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/InventoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/TaskService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/service/InventoryServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/InventoryServiceTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -285,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746531054929</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add service tests and service layer, refactor to quantity to be external from inventory item">
+      <option name="closed" value="true" />
+      <created>1746592217109</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1746592217109</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -309,17 +311,7 @@
     <MESSAGE value="Add inventory controller for separation of concerns" />
     <MESSAGE value="Add repository for in memory task storage" />
     <MESSAGE value="Add inmemory (thread safe) repository with, initial service layer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add inmemory (thread safe) repository with, initial service layer" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/InventoryService.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add service tests and service layer, refactor to quantity to be external from inventory item" />
+    <option name="LAST_COMMIT_MESSAGE" value="add service tests and service layer, refactor to quantity to be external from inventory item" />
   </component>
 </project>
