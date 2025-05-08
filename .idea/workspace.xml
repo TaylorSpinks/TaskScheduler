@@ -95,7 +95,31 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.ThreadServiceTests.testCreateTask">
+  <component name="RunManager" selected="Gradle.InventoryServiceTests.testWhenUpdateInventory">
+    <configuration name="InventoryServiceTests.testWhenUpdateInventory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;service.InventoryServiceTests.testWhenUpdateInventory&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReduced" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -110,30 +134,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;service.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReduced&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReducedAndIsNegative" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;service.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReducedAndIsNegative&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -218,11 +218,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.InventoryServiceTests.testWhenUpdateInventory" />
+        <item itemvalue="Gradle.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReduced" />
         <item itemvalue="Gradle.ThreadServiceTests.testCreateTask" />
         <item itemvalue="Gradle.ThreadServiceTests.testCreateManyTasksThatAddRemove" />
         <item itemvalue="Gradle.ThreadServiceTests" />
-        <item itemvalue="Gradle.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReducedAndIsNegative" />
-        <item itemvalue="Gradle.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReduced" />
       </list>
     </recent_temporary>
   </component>
