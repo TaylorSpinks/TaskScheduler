@@ -24,9 +24,7 @@ public class ThreadServiceTests {
         ThreadService threadService = new ThreadService(inventoryService);
         ArrayList<TaskModel> generatedTasks = CreateTasksHelper.generateManyTasks(numberOfTasks);
 
-        threadService.runTasks(generatedTasks);
-
-        Map<InventoryItem, Integer> itemsStoredInMemory = inventoryService.getAllItems();
+        Map<InventoryItem, Integer> itemsStoredInMemory = threadService.runTasks(generatedTasks);
 
         for (TaskModel task : generatedTasks) {
             InventoryItem item = task.getInventoryItem();
@@ -65,9 +63,7 @@ public class ThreadServiceTests {
         ThreadService threadService = new ThreadService(inventoryService);
         ArrayList<TaskModel> generatedTasks = CreateTasksHelper.generateManyTasks(numberOfTasks);
 
-        threadService.runTasks(generatedTasks);
-
-        Map<InventoryItem, Integer> itemsStoredInMemory = inventoryService.getAllItems();
+        Map<InventoryItem, Integer> itemsStoredInMemory = threadService.runTasks(generatedTasks);
 
         for (TaskModel task : generatedTasks) {
             InventoryItem item = task.getInventoryItem();

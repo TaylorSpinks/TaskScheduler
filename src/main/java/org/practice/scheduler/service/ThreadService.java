@@ -1,8 +1,10 @@
 package org.practice.scheduler.service;
 
+import org.practice.scheduler.entities.InventoryItem;
 import org.practice.scheduler.model.TaskModel;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 public class ThreadService {
 
@@ -12,7 +14,7 @@ public class ThreadService {
         this.inventoryService = inventoryService;
     }
 
-    public void runTasks(ArrayList<TaskModel> generatedTasks) throws InterruptedException {
+    public Map<InventoryItem,Integer> runTasks(ArrayList<TaskModel> generatedTasks) throws InterruptedException {
 
         ArrayList<Thread> threadsToRun = new ArrayList<>();
 
@@ -28,5 +30,7 @@ public class ThreadService {
         for(Thread thread : threadsToRun){
             thread.join();
         }
+
+        return inventoryService.getAllItems();
     }
 }

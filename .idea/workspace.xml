@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df313d29-1e32-4fc3-b391-9f64c4c73df0" name="Changes" comment="Mostly working threading with one outstanding bug related to update stock. I have a race condition. It needs to be made atomic.">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="df313d29-1e32-4fc3-b391-9f64c4c73df0" name="Changes" comment="Push workspace changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InMemoryInventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InMemoryInventoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/InventoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/ThreadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/ThreadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/ThreadServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/ThreadServiceTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +94,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.InventoryServiceTests.testWhenUpdateInventory">
+  <component name="RunManager" selected="Gradle.ThreadServiceTests.testCreateManyTasksThatAddRemove">
     <configuration name="InventoryServiceTests.testWhenUpdateInventory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -218,10 +217,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ThreadServiceTests.testCreateManyTasksThatAddRemove" />
         <item itemvalue="Gradle.InventoryServiceTests.testWhenUpdateInventory" />
         <item itemvalue="Gradle.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReduced" />
         <item itemvalue="Gradle.ThreadServiceTests.testCreateTask" />
-        <item itemvalue="Gradle.ThreadServiceTests.testCreateManyTasksThatAddRemove" />
         <item itemvalue="Gradle.ThreadServiceTests" />
       </list>
     </recent_temporary>
@@ -323,7 +322,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746624079493</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Make update atomic">
+      <option name="closed" value="true" />
+      <created>1746672197940</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1746672197940</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Push workspace changes">
+      <option name="closed" value="true" />
+      <created>1746672482825</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1746672482825</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -351,6 +366,8 @@
     <MESSAGE value="refactor test naming to be accurate, miss named as task but should be inventory" />
     <MESSAGE value="Fix update method to make the difference using absolute value of x" />
     <MESSAGE value="Mostly working threading with one outstanding bug related to update stock. I have a race condition. It needs to be made atomic." />
-    <option name="LAST_COMMIT_MESSAGE" value="Mostly working threading with one outstanding bug related to update stock. I have a race condition. It needs to be made atomic." />
+    <MESSAGE value="Make update atomic" />
+    <MESSAGE value="Push workspace changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Push workspace changes" />
   </component>
 </project>
