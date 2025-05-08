@@ -25,8 +25,11 @@ public class InMemoryInventoryRepository implements InventoryRepository {
 
     @Override
     public void update(InventoryItem item, int quantity) {
-        AtomicInteger current = this.inventory.computeIfAbsent(item, k -> new AtomicInteger(0));
-        current.getAndAdd(quantity);
+        inventory.compute(item, (currItem,atomicQuantity) -> {
+            int currQuantity = (atomicQuantity != null) ? atomicQuantity.get() : 0;
+            currQuantity = Math.max(0,currQuantity + quantity);
+            return new AtomicInteger(currQuantity);
+        });
     }
 
     @Override

@@ -11,7 +11,6 @@ public class InventoryService {
 
     public void addStock(InventoryItem item, int quantity){
         inMemoryInventoryRepository.add(item, quantity);
-
     }
 
     public void removeStock(InventoryItem item){
@@ -21,12 +20,6 @@ public class InventoryService {
 
     public void updateStock(InventoryItem item, int quantity){
         inMemoryInventoryRepository.update(item, quantity);
-        int newQuantity = inMemoryInventoryRepository.getQuantity(item);
-
-        if(newQuantity < 0){
-            // we don't want negative quantities
-            inMemoryInventoryRepository.update(item, Math.abs(newQuantity));
-        }
     }
 
     public Map<InventoryItem,Integer> getAllItems(){

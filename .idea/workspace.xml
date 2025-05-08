@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df313d29-1e32-4fc3-b391-9f64c4c73df0" name="Changes" comment="Fix update method to make the difference using absolute value of x">
-      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/CreateTasksHelper.java" afterDir="false" />
+    <list default="true" id="df313d29-1e32-4fc3-b391-9f64c4c73df0" name="Changes" comment="Mostly working threading with one outstanding bug related to update stock. I have a race condition. It needs to be made atomic.">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/model/TaskModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/model/TaskModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InMemoryInventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/reppository/InMemoryInventoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/InventoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/ThreadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/ThreadService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/service/InventoryServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/InventoryServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/service/TaskServiceTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/service/ThreadServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/ThreadServiceTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,59 +42,59 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "TaylorSpinks"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;TaylorSpinks&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/TaylorSpinks/TaskScheduler",
-    "accountId": "26d860ab-395c-4e7a-a9e9-0d4675f97d0c"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/TaylorSpinks/TaskScheduler&quot;,
+    &quot;accountId&quot;: &quot;26d860ab-395c-4e7a-a9e9-0d4675f97d0c&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2wfapthEhPoUdwEoMOHDf7zsAwI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.InventoryControllerTests.shouldReturnInventoryItemsWHenAddingTasks.executor": "Run",
-    "Gradle.InventoryServiceTests.testWhenAddInventory.executor": "Run",
-    "Gradle.InventoryServiceTests.testWhenAddTask.executor": "Run",
-    "Gradle.InventoryServiceTests.testWhenReduceInventory.executor": "Run",
-    "Gradle.InventoryServiceTests.testWhenReduceInventoryAndResultIsNegative.executor": "Run",
-    "Gradle.InventoryServiceTests.testWhenRemoveInventory.executor": "Run",
-    "Gradle.InventoryServiceTests.testWhenRemoveTask.executor": "Run",
-    "Gradle.InventoryServiceTests.testWhenUpdateInventory.executor": "Run",
-    "Gradle.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReduced.executor": "Run",
-    "Gradle.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReducedAndIsNegative.executor": "Run",
-    "Gradle.InventoryServiceTests.testWhenUpdateTask.executor": "Run",
-    "Gradle.TaskControllerTests.shouldReturnInventoryItems.executor": "Run",
-    "Gradle.TaskControllerTests.shouldReturnInventoryItemsWHenAddingTasks.executor": "Run",
-    "Gradle.TaskControllerTests.shouldReturnOkWhenAddingTasks.executor": "Run",
-    "Gradle.TaskScheduler.executor": "Run",
-    "Gradle.ThreadServiceTests.executor": "Run",
-    "Gradle.ThreadServiceTests.testCreateManyTasksThatAddRemove.executor": "Run",
-    "Gradle.ThreadServiceTests.testCreateTask.executor": "Run",
-    "RunOnceActivity.git.unshallow": "true",
-    "Shell Script.gradlew.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.InventoryControllerTests.shouldReturnInventoryItemsWHenAddingTasks.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.InventoryServiceTests.testWhenAddInventory.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.InventoryServiceTests.testWhenAddTask.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.InventoryServiceTests.testWhenReduceInventory.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.InventoryServiceTests.testWhenReduceInventoryAndResultIsNegative.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.InventoryServiceTests.testWhenRemoveInventory.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.InventoryServiceTests.testWhenRemoveTask.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.InventoryServiceTests.testWhenUpdateInventory.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReduced.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReducedAndIsNegative.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.InventoryServiceTests.testWhenUpdateTask.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TaskControllerTests.shouldReturnInventoryItems.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TaskControllerTests.shouldReturnInventoryItemsWHenAddingTasks.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TaskControllerTests.shouldReturnOkWhenAddingTasks.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TaskScheduler.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ThreadServiceTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ThreadServiceTests.testCreateManyTasksThatAddRemove.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ThreadServiceTests.testCreateTask.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Shell Script.gradlew.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Gradle.ThreadServiceTests.testCreateTask">
     <configuration name="InventoryServiceTests.testWhenUpdateInventoryAndTotalQuantityIsReduced" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -319,7 +315,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746613132920</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Mostly working threading with one outstanding bug related to update stock. I have a race condition. It needs to be made atomic.">
+      <option name="closed" value="true" />
+      <created>1746624079493</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1746624079493</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -346,6 +350,7 @@
     <MESSAGE value="add service tests and service layer, refactor to quantity to be external from inventory item" />
     <MESSAGE value="refactor test naming to be accurate, miss named as task but should be inventory" />
     <MESSAGE value="Fix update method to make the difference using absolute value of x" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix update method to make the difference using absolute value of x" />
+    <MESSAGE value="Mostly working threading with one outstanding bug related to update stock. I have a race condition. It needs to be made atomic." />
+    <option name="LAST_COMMIT_MESSAGE" value="Mostly working threading with one outstanding bug related to update stock. I have a race condition. It needs to be made atomic." />
   </component>
 </project>
