@@ -26,11 +26,15 @@ public class CreateTasksHelper {
         ArrayList<TaskModel> tasks = new ArrayList<>();
 
         for (int i = 0; i < count; i++) {
-            String itemName = ITEM_NAMES.get(random.nextInt(ITEM_NAMES.size()));
-            String itemType = ITEM_TYPES.get(random.nextInt(ITEM_TYPES.size()));
-            InventoryItem item = new InventoryItem(itemName, itemType);
-            int quantity = random.nextInt(100);
+            // don't like this but it works for now, thanks chatgpt. it just creates a uid by wrapping the integer around to the start
+            // todo: change to a more realistic test builder
+            String baseName = ITEM_NAMES.get(i % ITEM_NAMES.size());
+            String itemName = baseName + "_Item_" + i;
 
+            String itemType = ITEM_TYPES.get(i % ITEM_TYPES.size());
+            InventoryItem item = new InventoryItem(itemName, itemType);
+
+            int quantity = random.nextInt(100);
             InventoryOperationType operation = OPERATIONS[random.nextInt(OPERATIONS.length)];
 
             TaskModel task = new TaskModel();
@@ -43,4 +47,5 @@ public class CreateTasksHelper {
 
         return tasks;
     }
+
 }
