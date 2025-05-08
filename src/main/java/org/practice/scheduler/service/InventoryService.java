@@ -4,7 +4,6 @@ import org.practice.scheduler.entities.InventoryItem;
 import org.practice.scheduler.reppository.InMemoryInventoryRepository;
 
 import java.util.Map;
-import java.util.logging.Logger;
 
 public class InventoryService {
     private final InMemoryInventoryRepository inMemoryInventoryRepository = new InMemoryInventoryRepository();

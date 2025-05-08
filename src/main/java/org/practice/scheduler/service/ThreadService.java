@@ -14,11 +14,11 @@ public class ThreadService {
         this.inventoryService = inventoryService;
     }
 
-    public Map<InventoryItem,Integer> runTasks(ArrayList<TaskModel> generatedTasks) throws InterruptedException {
+    public Map<InventoryItem,Integer> runTasks(ArrayList<TaskModel> tasks) throws InterruptedException {
 
         ArrayList<Thread> threadsToRun = new ArrayList<>();
 
-        for (TaskModel taskModel : generatedTasks) {
+        for (TaskModel taskModel : tasks) {
             TaskService task = new TaskService(inventoryService, taskModel.getOperationType(), taskModel.getInventoryItem(), taskModel.getQuantity());
             threadsToRun.add(new Thread(task));
         }

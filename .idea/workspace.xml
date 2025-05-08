@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df313d29-1e32-4fc3-b391-9f64c4c73df0" name="Changes" comment="Refactor thread service to return the items in memory just after thread join, to preserve state">
+    <list default="true" id="df313d29-1e32-4fc3-b391-9f64c4c73df0" name="Changes" comment="Make keys unique in create task helper&#10;will need refactoring later, probably in the kotlin rewrite">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/handler/TaskHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/CreateTasksHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/CreateTasksHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/controller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/controller/InventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/entities/InventoryItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/entities/InventoryItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/model/TaskModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/model/TaskModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/InventoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/ThreadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/scheduler/service/ThreadService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -345,7 +351,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746673127961</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Make keys unique in create task helper&#10;will need refactoring later, probably in the kotlin rewrite">
+      <option name="closed" value="true" />
+      <created>1746674586696</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1746674586696</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -376,7 +390,8 @@
     <MESSAGE value="Make update atomic" />
     <MESSAGE value="Push workspace changes" />
     <MESSAGE value="Refactor thread service to return the items in memory just after thread join, to preserve state" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor thread service to return the items in memory just after thread join, to preserve state" />
+    <MESSAGE value="Make keys unique in create task helper&#10;will need refactoring later, probably in the kotlin rewrite" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make keys unique in create task helper&#10;will need refactoring later, probably in the kotlin rewrite" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

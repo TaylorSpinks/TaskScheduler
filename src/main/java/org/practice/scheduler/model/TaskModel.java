@@ -8,6 +8,8 @@ public class TaskModel {
     private InventoryItem inventoryItem;
     private int quantity;
 
+    public TaskModel() {}
+
     public InventoryItem getInventoryItem() {
         return inventoryItem;
     }
